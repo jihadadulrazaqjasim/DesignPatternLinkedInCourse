@@ -2,7 +2,7 @@
 
 use Phppractice\Controllers\Auth\LoginController;
 
-require_once    'vendor/autoload.php';
+require_once    'vendor/autoload.php'; 
 
 
 // $client = new \GuzzleHttp\Client();
