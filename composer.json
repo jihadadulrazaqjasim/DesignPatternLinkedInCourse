@@ -1,0 +1,19 @@
+{
+    "name": "jihad/phppractice",
+    "description": "This is my practice my php oop interview preparation",
+    "license": "0.1",
+    "autoload": {
+        "psr-4": {
+            "Phppractice\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jihad Abdulrazaq",
+            "email": "jihad.abdulrazaq@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.4"
+    }
+}
