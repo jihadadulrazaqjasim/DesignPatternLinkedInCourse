@@ -2,7 +2,49 @@
 
 use Phppractice\Controllers\Auth\LoginController;
 
-require_once    'vendor/autoload.php'; 
+require_once    'vendor/autoload.php';
+
+
+
+
+// if ($file = fopen("./a_an_example.in.txt", "r")) {
+//     while (!feof($file)) {
+//         $line = fgets($file);
+//         echo $line . "<br>";
+//     }
+//     fclose($file);
+// }
+
+$file = new SplFileObject("a_an_example.in.txt");
+$firstLine = explode(' ', $file->fgets());
+$contributorsCount =  $firstLine[0];
+$projectsCount = $firstLine[1];
+
+while (!$file->eof()) {
+    // echo $file->fgets() . '<br/>';
+
+    $line = explode(' ', $file->fgets());
+
+
+    $skill_count = $line[1];
+
+    for ($i = 0; $i < $skill_count; $i++) {
+        echo $line[0] . "<br>";
+    }
+  
+}
+
+$file = null;
+
+
+
+
+
+
+
+
+
+
 
 
 // $client = new \GuzzleHttp\Client();
@@ -25,9 +67,9 @@ require_once    'vendor/autoload.php';
 
 // require_once 'autoload.php';
 
-$user = new LoginController('jihad', '123');
+// $user = new LoginController('jihad', '123');
 
-echo $user->getCredentials();
+// echo $user->getCredentials();
 // echo "<br>";
 
 // $home = new Controllers\HomeController();
