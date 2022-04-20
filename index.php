@@ -11,21 +11,14 @@ require_once  'vendor/autoload.php';
 // echo "<br>";
 // $myPhoto->share();
 
-function testDuck(Duck $duck){
-    $duck->fly();
-    echo "<br>";
-    $duck->quack();
-}
-
-
-
- $mallard1 = new MallardDuck();
- testDuck($mallard1);
+// function testDuck(Duck $duck){
+//     $duck->fly();
+//     echo "<br>";
+//     $duck->quack();
+// }
+//  $mallard1 = new MallardDuck();
+//  testDuck($mallard1);
  
-
-
-
-
 
 // $obj = new ss();
 
