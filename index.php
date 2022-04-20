@@ -1,52 +1,35 @@
 <?php
+use Phppractice\DesignPatternLinkedIn\StrategyPattern\{CameraAppPlus,SocialMedia};
+use Phppractice\DesignPatternLinkedIn\AdapterPattern_Ex1\{Duck, MallardDuck};
 
-use Phppractice\Controllers\Auth\LoginController;
+require_once  'vendor/autoload.php';
 
-require_once    'vendor/autoload.php';
+// Strategy Pattern
+// $myPhoto = new CameraAppPlus();
+// $myPhoto->take();
+// $myPhoto->setSharableBehavior(new SocialMedia());
+// echo "<br>";
+// $myPhoto->share();
 
-
-
-
-// if ($file = fopen("./a_an_example.in.txt", "r")) {
-//     while (!feof($file)) {
-//         $line = fgets($file);
-//         echo $line . "<br>";
-//     }
-//     fclose($file);
-// }
-
-$file = new SplFileObject("a_an_example.in.txt");
-$firstLine = explode(' ', $file->fgets());
-$contributorsCount =  $firstLine[0];
-$projectsCount = $firstLine[1];
-
-while (!$file->eof()) {
-    // echo $file->fgets() . '<br/>';
-
-    $line = explode(' ', $file->fgets());
-
-
-    $skill_count = $line[1];
-
-    for ($i = 0; $i < $skill_count; $i++) {
-        echo $line[0] . "<br>";
-    }
-  
+function testDuck(Duck $duck){
+    $duck->fly();
+    echo "<br>";
+    $duck->quack();
 }
 
-$file = null;
+
+
+ $mallard1 = new MallardDuck();
+ testDuck($mallard1);
+ 
 
 
 
 
 
+// $obj = new ss();
 
-
-
-
-
-
-
+// $obj->printSomething();
 // $client = new \GuzzleHttp\Client();
 // $response = $client->request('GET', 'http://burak.dastcenter.com/');
 
