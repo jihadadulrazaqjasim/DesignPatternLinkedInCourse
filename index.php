@@ -1,6 +1,7 @@
 <?php
-use Phppractice\DesignPatternLinkedIn\StrategyPattern\{CameraAppPlus,SocialMedia};
-use Phppractice\DesignPatternLinkedIn\AdapterPattern_Ex1\{Duck, MallardDuck};
+
+use Phppractice\DesignPatternLinkedIn\StrategyPattern\{CameraAppPlus, SocialMedia};
+use Phppractice\DesignPatternLinkedIn\AdapterPattern_Ex1\{Duck, MallardDuck, TurkeyAdapter, WildTurkey};
 
 require_once  'vendor/autoload.php';
 
@@ -11,13 +12,21 @@ require_once  'vendor/autoload.php';
 // echo "<br>";
 // $myPhoto->share();
 
-function testDuck(Duck $duck){
+function testDuck(Duck $duck)
+{
     $duck->fly();
     echo "<br>";
     $duck->quack();
 }
- $mallard1 = new MallardDuck();
- testDuck($mallard1);
+$mallard1 = new MallardDuck();
+testDuck($mallard1);
+
+echo "<br>";
+
+
+$turkey = new WildTurkey();
+$turkeyAdapter = new TurkeyAdapter($turkey);
+testDuck($turkeyAdapter);
  
 
 // $obj = new ss();
