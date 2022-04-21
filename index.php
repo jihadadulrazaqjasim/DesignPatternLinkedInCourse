@@ -3,6 +3,8 @@
 use Phppractice\DesignPatternLinkedIn\StrategyPattern\{CameraAppPlus, SocialMedia};
 use Phppractice\DesignPatternLinkedIn\AdapterPattern_Ex1\{Duck, MallardDuck, TurkeyAdapter, WildTurkey};
 
+use  Phppractice\DesignPatternLinkedIn\AdapterPattern_Challenge\{DroneAdapter, SuperDrone};
+
 require_once  'vendor/autoload.php';
 
 // Strategy Pattern
@@ -27,7 +29,15 @@ echo "<br>";
 $turkey = new WildTurkey();
 $turkeyAdapter = new TurkeyAdapter($turkey);
 testDuck($turkeyAdapter);
- 
+
+
+echo "<br>";
+
+
+// Challenge
+$drone = new SuperDrone();
+$droneAdapter = new DroneAdapter($drone);
+testDuck($droneAdapter);
 
 // $obj = new ss();
 
