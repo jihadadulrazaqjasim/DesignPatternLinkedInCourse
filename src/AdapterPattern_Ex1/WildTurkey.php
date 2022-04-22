@@ -1,7 +1,7 @@
 <?php
 
-namespace Phppractice\DesignPatternLinkedIn\AdapterPattern_Ex1;
-// use Phppractice\DesignPatternLinkedIn\AdapterPattern_Ex1\Turkey;
+namespace Phppractice\AdapterPattern_Ex1;
+// use Phppractice\AdapterPattern_Ex1\Turkey;
 
 class WildTurkey implements Turkey{
     

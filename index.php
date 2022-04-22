@@ -1,9 +1,9 @@
 <?php
 
-use Phppractice\DesignPatternLinkedIn\StrategyPattern\{CameraAppPlus, SocialMedia};
-use Phppractice\DesignPatternLinkedIn\AdapterPattern_Ex1\{Duck, MallardDuck, TurkeyAdapter, WildTurkey};
+use Phppractice\StrategyPattern\{CameraAppPlus, SocialMedia};
+use Phppractice\AdapterPattern_Ex1\{Duck, MallardDuck, TurkeyAdapter, WildTurkey};
 
-use  Phppractice\DesignPatternLinkedIn\AdapterPattern_Challenge\{DroneAdapter, SuperDrone};
+use  Phppractice\AdapterPattern_Challenge\{DroneAdapter, SuperDrone};
 
 require_once  'vendor/autoload.php';
 

@@ -1,5 +1,5 @@
 <?php
-namespace Phppractice\DesignPatternLinkedIn\StrategyPattern;
+namespace Phppractice\StrategyPattern;
 
 class BasicCameraApp extends PhoneCameraApp{
 

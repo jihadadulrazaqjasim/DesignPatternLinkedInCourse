@@ -1,5 +1,5 @@
 <?php
-namespace Phppractice\DesignPatternLinkedIn\AdapterPattern_Challenge;
+namespace Phppractice\AdapterPattern_Challenge;
 
 interface Drone {
 

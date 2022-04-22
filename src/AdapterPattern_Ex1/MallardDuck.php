@@ -1,5 +1,5 @@
 <?php
-namespace Phppractice\DesignPatternLinkedIn\AdapterPattern_Ex1;
+namespace Phppractice\AdapterPattern_Ex1;
 
 
 class MallardDuck implements Duck {

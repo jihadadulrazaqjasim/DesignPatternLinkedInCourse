@@ -1,8 +1,8 @@
 <?php
 
-namespace Phppractice\DesignPatternLinkedIn\AdapterPattern_Challenge;
+namespace Phppractice\AdapterPattern_Challenge;
 
-use Phppractice\DesignPatternLinkedIn\AdapterPattern_Ex1\Duck;
+use Phppractice\AdapterPattern_Ex1\Duck;
 
 class DroneAdapter implements Duck
 {

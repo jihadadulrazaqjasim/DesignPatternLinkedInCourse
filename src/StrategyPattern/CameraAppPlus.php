@@ -1,5 +1,5 @@
 <?php
-namespace Phppractice\DesignPatternLinkedIn\StrategyPattern;
+namespace Phppractice\StrategyPattern;
 
 class CameraAppPlus extends PhoneCameraApp{
     public function edit()

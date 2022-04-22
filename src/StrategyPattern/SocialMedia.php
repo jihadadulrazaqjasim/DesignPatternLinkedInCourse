@@ -1,5 +1,5 @@
 <?php
-namespace Phppractice\DesignPatternLinkedIn\StrategyPattern;
+namespace Phppractice\StrategyPattern;
 
 class SocialMedia implements SharableBehavior{
 

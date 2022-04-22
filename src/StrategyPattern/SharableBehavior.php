@@ -1,6 +1,6 @@
 <?php
 
-namespace Phppractice\DesignPatternLinkedIn\StrategyPattern;
+namespace Phppractice\StrategyPattern;
 
 interface SharableBehavior {
    public function share ();
