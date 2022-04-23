@@ -4,6 +4,5 @@ namespace Phppractice\ObserverPattern_Challenge;
 
 interface Observer
 {
-
-    function update();
+    function update(float $temperature,float $windSpeed,float $pressure);
 }
