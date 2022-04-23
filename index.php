@@ -4,9 +4,12 @@ use Phppractice\StrategyPattern\{CameraAppPlus, SocialMedia};
 use Phppractice\AdapterPattern_Ex1\{Duck, MallardDuck, TurkeyAdapter, WildTurkey};
 
 use  Phppractice\AdapterPattern_Challenge\{DroneAdapter, SuperDrone};
+use Phppractice\DecoratorPattern_Ex\Beverage;
 use Phppractice\ObserverPattern_Ex\{SimpleObserver, SimpleSubject};
 
 use Phppractice\ObserverPattern_Challenge\{WeatherData, CurrentConditionDisplay, ForecastDisplay, StatisticsDisplay};
+
+use Phppractice\DecoratorPattern_Ex\{DarkRoast, Mocha, Whip};
 
 require_once  'vendor/autoload.php';
 
@@ -55,17 +58,25 @@ require_once  'vendor/autoload.php';
 
 
 // --Observer Challenge--
-$weatherData = new WeatherData();
+// $weatherData = new WeatherData();
+// $currentMeasurements = new CurrentConditionDisplay($weatherData);
+// $foreCast = new ForecastDisplay($weatherData);
+// $statistics = new StatisticsDisplay($weatherData);
+
+// echo "<br><br>First change: <br>";
+// $weatherData->setMeasurements(30, 12, 30);
+// echo "<br><br>Second change: <br>";
+// $weatherData->setMeasurements(60, 32, 19);
+// echo "<br>Third change: <br>";
+// $weatherData->setMeasurements(37,21,21);
 
 
-$currentMeasurements = new CurrentConditionDisplay($weatherData);
-$foreCast = new ForecastDisplay($weatherData);
-$statistics = new StatisticsDisplay($weatherData);
+// --Decorator Example--
 
+$darkRoast = new DarkRoast();
+$darkRoast = new Whip($darkRoast);
+$darkRoast = new Mocha($darkRoast);
 
-echo "<br><br>First change: <br>";
-$weatherData->setMeasurements(30, 12, 30);
-echo "<br><br>Second change: <br>";
-$weatherData->setMeasurements(60, 32, 19);
-echo "<br>Third change: <br>";
-$weatherData->setMeasurements(37,21,21);
+$darkRoast = new Whip($darkRoast);
+
+echo $darkRoast->getDescription() . " $" . $darkRoast->cost();
