@@ -11,6 +11,9 @@ use Phppractice\ObserverPattern_Challenge\{WeatherData, CurrentConditionDisplay,
 
 use Phppractice\DecoratorPattern_Ex\{DarkRoast, Mocha, Whip};
 
+
+use Phppractice\DecoratorPattern_Challenge\{Cheese, Olives, ThinCrustPizza, ThickCrustPizza};
+
 require_once  'vendor/autoload.php';
 
 // --Strategy Pattern--
@@ -71,12 +74,22 @@ require_once  'vendor/autoload.php';
 // $weatherData->setMeasurements(37,21,21);
 
 
-// --Decorator Example--
+// --Decorator Pattern Example--
 
-$darkRoast = new DarkRoast();
-$darkRoast = new Whip($darkRoast);
-$darkRoast = new Mocha($darkRoast);
+// $darkRoast = new DarkRoast();
+// $darkRoast = new Whip($darkRoast);
+// $darkRoast = new Mocha($darkRoast);
 
-$darkRoast = new Whip($darkRoast);
+// $darkRoast = new Whip($darkRoast);
 
-echo $darkRoast->getDescription() . " $" . $darkRoast->cost();
+// echo $darkRoast->getDescription() . " $" . $darkRoast->cost();
+
+// --Deecorator Pattern Challenge
+
+$pizza1 = new ThickCrustPizza();
+
+$pizza1 = new Cheese($pizza1);
+
+$pizza1 = new Olives($pizza1);
+
+echo $pizza1->getDescription() . " $" . $pizza1->cost();
