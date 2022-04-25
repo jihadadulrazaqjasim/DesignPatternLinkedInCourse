@@ -2,17 +2,18 @@
 
 use Phppractice\StrategyPattern\{CameraAppPlus, SocialMedia};
 use Phppractice\AdapterPattern_Ex1\{Duck, MallardDuck, TurkeyAdapter, WildTurkey};
-
 use  Phppractice\AdapterPattern_Challenge\{DroneAdapter, SuperDrone};
 use Phppractice\DecoratorPattern_Ex\Beverage;
 use Phppractice\ObserverPattern_Ex\{SimpleObserver, SimpleSubject};
-
 use Phppractice\ObserverPattern_Challenge\{WeatherData, CurrentConditionDisplay, ForecastDisplay, StatisticsDisplay};
-
 use Phppractice\DecoratorPattern_Ex\{DarkRoast, Mocha, Whip};
-
-
 use Phppractice\DecoratorPattern_Challenge\{Cheese, Olives, ThinCrustPizza, ThickCrustPizza};
+
+
+use Phppractice\FactoryPattern_Ex\ChicagoStylePizzaStore;
+use Phppractice\FactoryPattern_Ex\NYStylePizzaStore;
+
+
 
 require_once  'vendor/autoload.php';
 
@@ -86,10 +87,14 @@ require_once  'vendor/autoload.php';
 
 // --Deecorator Pattern Challenge
 
-$pizza1 = new ThickCrustPizza();
+// $pizza1 = new ThickCrustPizza();
 
-$pizza1 = new Cheese($pizza1);
+// $pizza1 = new Cheese($pizza1);
 
-$pizza1 = new Olives($pizza1);
+// $pizza1 = new Olives($pizza1);
 
-echo $pizza1->getDescription() . " $" . $pizza1->cost();
+// echo $pizza1->getDescription() . " $" . $pizza1->cost();
+
+$chicagoStore = new ChicagoStylePizzaStore();
+
+$chicagoStore->orderPizza("cheese");
