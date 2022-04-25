@@ -10,10 +10,9 @@ use Phppractice\DecoratorPattern_Ex\{DarkRoast, Mocha, Whip};
 use Phppractice\DecoratorPattern_Challenge\{Cheese, Olives, ThinCrustPizza, ThickCrustPizza};
 
 
-use Phppractice\FactoryPattern_Ex\ChicagoStylePizzaStore;
-use Phppractice\FactoryPattern_Ex\NYStylePizzaStore;
+use Phppractice\FactoryPattern_Ex\{ChicagoStylePizzaStore,NYStylePizzaStore};
 
-
+use Phppractice\FactoryPattern_Challenge\{PacificCalendar,ZoneFactory};
 
 require_once  'vendor/autoload.php';
 
@@ -95,6 +94,12 @@ require_once  'vendor/autoload.php';
 
 // echo $pizza1->getDescription() . " $" . $pizza1->cost();
 
-$chicagoStore = new ChicagoStylePizzaStore();
+// $chicagoStore = new ChicagoStylePizzaStore();
 
-$chicagoStore->orderPizza("cheese");
+// $chicagoStore->orderPizza("cheese");
+
+$zonefactory = new ZoneFactory();
+
+$pacific = new PacificCalendar($zonefactory);
+
+$pacific->print();
