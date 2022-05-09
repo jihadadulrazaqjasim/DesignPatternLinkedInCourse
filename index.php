@@ -1,6 +1,6 @@
 <?php
 
-use Phppractice\StrategyPattern\{CameraAppPlus, SocialMedia};
+// use Phppractice\StrategyPattern\{CameraAppPlus, SocialMedia};
 use Phppractice\AdapterPattern_Ex1\{Duck, MallardDuck, TurkeyAdapter, WildTurkey};
 use  Phppractice\AdapterPattern_Challenge\{DroneAdapter, SuperDrone};
 use Phppractice\DecoratorPattern_Ex\Beverage;
