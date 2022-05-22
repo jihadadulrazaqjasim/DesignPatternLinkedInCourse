@@ -1,6 +1,11 @@
 <?php
 
 // use Phppractice\StrategyPattern\{CameraAppPlus, SocialMedia};
+
+use Phppractice\AdapterExampleLaracast\Book;
+use Phppractice\AdapterExampleLaracast\Kindle;
+use Phppractice\AdapterExampleLaracast\Person;
+use Phppractice\AdapterExampleLaracast\eReaderAdapter;
 use Phppractice\AdapterPattern_Ex1\{Duck, MallardDuck, TurkeyAdapter, WildTurkey};
 use  Phppractice\AdapterPattern_Challenge\{DroneAdapter, SuperDrone};
 use Phppractice\DecoratorPattern_Ex\Beverage;
@@ -10,9 +15,11 @@ use Phppractice\DecoratorPattern_Ex\{DarkRoast, Mocha, Whip};
 use Phppractice\DecoratorPattern_Challenge\{Cheese, Olives, ThinCrustPizza, ThickCrustPizza};
 
 
-use Phppractice\FactoryPattern_Ex\{ChicagoStylePizzaStore,NYStylePizzaStore};
+use Phppractice\FactoryPattern_Ex\{ChicagoStylePizzaStore, NYStylePizzaStore};
 
-use Phppractice\FactoryPattern_Challenge\{PacificCalendar,ZoneFactory};
+use Phppractice\FactoryPattern_Challenge\{PacificCalendar, ZoneFactory};
+use Phppractice\TemplateMethodPattern_Ex1\TurkeySub;
+use Phppractice\TemplateMethodPattern_Ex1\VeggineSub;
 
 require_once  'vendor/autoload.php';
 
@@ -50,6 +57,15 @@ require_once  'vendor/autoload.php';
 // $drone = new SuperDrone();
 // $droneAdapter = new DroneAdapter($drone);
 // testDuck($droneAdapter);
+
+
+
+// --Adapter Laracast Example--
+// $person = new Person();
+// $person->read(new Book());
+// echo "<br>";
+// $person2 = new Person();
+// $person2->read(new eReaderAdapter(new Kindle()));
 
 
 // --Ovserver example--
@@ -98,8 +114,21 @@ require_once  'vendor/autoload.php';
 
 // $chicagoStore->orderPizza("cheese");
 
-$zonefactory = new ZoneFactory();
+// $zonefactory = new ZoneFactory();
 
-$pacific = new PacificCalendar($zonefactory);
+// $pacific = new PacificCalendar($zonefactory);
 
-$pacific->print();
+// $pacific->print();
+
+
+
+// Template Method Pattern Laracast
+
+$veggieSub = new VeggineSub();
+$veggieSub->make();
+
+echo PHP_EOL;
+
+$veggieSub = new TurkeySub();
+$veggieSub->make();
+echo PHP_EOL;
