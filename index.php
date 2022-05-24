@@ -18,6 +18,9 @@ use Phppractice\DecoratorPattern_Challenge\{Cheese, Olives, ThinCrustPizza, Thic
 use Phppractice\FactoryPattern_Ex\{ChicagoStylePizzaStore, NYStylePizzaStore};
 
 use Phppractice\FactoryPattern_Challenge\{PacificCalendar, ZoneFactory};
+use Phppractice\StrategyExampleLaracast\LogToDatabase;
+use Phppractice\StrategyExampleLaracast\LogtoFile;
+use Phppractice\StrategyExampleLaracast\MobileApp;
 use Phppractice\TemplateMethodPattern_Ex1\TurkeySub;
 use Phppractice\TemplateMethodPattern_Ex1\VeggineSub;
 
@@ -124,11 +127,20 @@ require_once  'vendor/autoload.php';
 
 // Template Method Pattern Laracast
 
-$veggieSub = new VeggineSub();
-$veggieSub->make();
+// $veggieSub = new VeggineSub();
+// $veggieSub->make();
+// echo PHP_EOL;
+// $veggieSub = new TurkeySub();
+// $veggieSub->make();
+// echo PHP_EOL;
+
+
+// Strategy Pattern Laracast
+$app1 = new MobileApp();
+$app1->access();
 
 echo PHP_EOL;
 
-$veggieSub = new TurkeySub();
-$veggieSub->make();
+$app1->setLoggableBehavior(new LogToDatabase());
+$app1->log();
 echo PHP_EOL;
